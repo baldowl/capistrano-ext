@@ -221,6 +221,10 @@ module MonitorServers
         count = Hash.new(0)
       end
     end
+
+    runner.exit
+    sleep 0.2
+    run "rm #{script}"
   end
 
   def put_asset(name, to)

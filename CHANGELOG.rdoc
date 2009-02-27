@@ -1,5 +1,6 @@
 == (unreleased)
 
+* Removing the request-counter script from servers on exit [Emanuele Vicentini]
 * Fixed stopping requests_per_second [Emanuele Vicentini]
 * Added explicit dependency on 'fileutils' [github.com/rouffj]
 * Fixed load and requests_per_second to work with cap2 [Gufo Pelato]
