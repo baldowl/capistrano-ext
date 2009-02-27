@@ -151,7 +151,7 @@ module MonitorServers
     sleep 0.01 while !running
 
     # trap interrupt for graceful shutdown
-    trap("INT") { puts "[stopping]"; channels.values.each { |ch| ch.close; ch[:status] = 0 } }
+    trap("INT") { running = false; puts "[stopping]"; channels.values.each { |ch| ch.close; ch[:status] = 0 } }
 
     # compute the stuff we need to know for displaying the header
     num_len = (num_format % 1).length
